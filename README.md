@@ -8,7 +8,7 @@ A set of .NET Core libraries for converting AIS AIVDM/AIVDO sentences into diffe
 
 AIS.Net.Converters is available under the Apache 2.0 open source license.
  
-The Data used by the AIS.Net.Converters for testing purposes is licensed under the [Norwegian license for public data (NLOD)](https://data.norge.no/nlod/en/2.0).
+The Data used by the AIS.Net.Converters for executable specifications and samples is licensed under the [Norwegian license for public data (NLOD)](https://data.norge.no/nlod/en/2.0).
 
 ## Project Sponsor
 
