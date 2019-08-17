@@ -3,11 +3,12 @@ A set of .NET Core libraries for converting AIS AIVDM/AIVDO sentences into diffe
 
 ## Licenses
 
-[![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/ais-dotnet/Ais.Net.Converters/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/License-Apache%202-blue.svg)](https://raw.githubusercontent.com/ais-dotnet/Ais.Net.Converters/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/License-NLOD-blue.svg)](https://data.norge.no/nlod/en/2.0)
 
-AIS.Net.Converters is also available under the Apache 2.0 open source license.
+AIS.Net.Converters is available under the Apache 2.0 open source license.
  
-The Data ingested by the AIS.Net.Converters is licensed under the [Norwegian license for public data (NLOD)](https://data.norge.no/nlod/en/2.0).
+The Data used by the AIS.Net.Converters for testing purposes is licensed under the [Norwegian license for public data (NLOD)](https://data.norge.no/nlod/en/2.0).
 
 ## Project Sponsor
 
