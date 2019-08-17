@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ais.Net.Converter", "Ais.Net.Converter\Ais.Net.Converter.csproj", "{2F189E11-6ACF-47F4-9813-94FA9B394D00}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ais.Net.Parquet", "Ais.Net.Parquet\Ais.Net.Parquet.csproj", "{245763BD-0B05-4107-9B3D-BB8F7ACBB88C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F189E11-6ACF-47F4-9813-94FA9B394D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F189E11-6ACF-47F4-9813-94FA9B394D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F189E11-6ACF-47F4-9813-94FA9B394D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F189E11-6ACF-47F4-9813-94FA9B394D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{245763BD-0B05-4107-9B3D-BB8F7ACBB88C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245763BD-0B05-4107-9B3D-BB8F7ACBB88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245763BD-0B05-4107-9B3D-BB8F7ACBB88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245763BD-0B05-4107-9B3D-BB8F7ACBB88C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B807F890-1DEB-4C00-A4FC-67EC55DE21F5}
+	EndGlobalSection
+EndGlobal
