@@ -5,12 +5,12 @@
 namespace Ais.Net.Converters.Parquet
 {
 
+    using global::Parquet;
+    using global::Parquet.Data;
+
     using System;
     using System.Buffers.Text;
     using System.IO;
-    using Endjin.Ais;
-    using global::Parquet;
-    using global::Parquet.Data;
 
     public class ParquetExporter : INmeaAisMessageStreamProcessor
     {
@@ -58,6 +58,7 @@ namespace Ais.Net.Converters.Parquet
             uint padding)
         {
             int messageType = NmeaPayloadParser.PeekMessageType(asciiPayload, padding);
+
             if (messageType >= 1 && messageType <= 3)
             {
                 var parsedPosition = new NmeaAisPositionReportClassAParser(asciiPayload, padding);
@@ -193,6 +194,11 @@ namespace Ais.Net.Converters.Parquet
                 groupWriter.WriteColumn(new DataColumn(courseOverGroundColumnDefinition, this.courseOverGrounds));
                 groupWriter.WriteColumn(new DataColumn(trueHeadingColumnDefinition, this.trueHeadings));
             }
+        }
+
+        public void OnError(in ReadOnlySpan<byte> line, Exception error, int lineNumber)
+        {
+            Console.WriteLine(error.Message);
         }
     }
 }
