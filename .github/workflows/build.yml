@@ -55,3 +55,4 @@ jobs:
       buildEnv: ${{ needs.prepareConfig.outputs.RESOLVED_ENV_VARS }}
     secrets:
       buildAzureCredentials: ${{ secrets.AZURE_READER_CREDENTIALS }}
+      buildSecrets: ${{ needs.prepareConfig.outputs.RESOLVED_SECRETS }}

@@ -13,6 +13,7 @@ $devopsExtensions = @(
 # Build process configuration
 #
 $SolutionToBuild = (Resolve-Path (Join-Path $here "./Solutions/Ais.Net.Converters.sln")).Path
+$SkipBuildModuleVersionCheck = $true    # currently doesn't work properly with endjin-devops
 
 
 # Set default build task
