@@ -59,53 +59,58 @@ namespace Ais.Net.Converters.Parquet
         {
             int messageType = NmeaPayloadParser.PeekMessageType(asciiPayload, padding);
 
-            if (messageType >= 1 && messageType <= 3)
+            switch (messageType)
             {
-                var parsedPosition = new NmeaAisPositionReportClassAParser(asciiPayload, padding);
-
-                try
+                case >= 1 and <= 3:
                 {
-                    this.WriteRow(
-                        firstLine.TagBlock,
-                        parsedPosition.Mmsi,
-                        parsedPosition.Latitude10000thMins,
-                        parsedPosition.Longitude10000thMins,
-                        parsedPosition.CourseOverGround10thDegrees,
-                        parsedPosition.TrueHeadingDegrees);
-                }
-                catch { }
-            }
+                    NmeaAisPositionReportClassAParser parsedPosition = new(asciiPayload, padding);
 
-            if (messageType == 18)
-            {
-                try
-                {
-                    var parsedPosition = new NmeaAisPositionReportClassBParser(asciiPayload, padding);
-                    this.WriteRow(
-                        firstLine.TagBlock,
-                        parsedPosition.Mmsi,
-                        parsedPosition.Latitude10000thMins,
-                        parsedPosition.Longitude10000thMins,
-                        parsedPosition.CourseOverGround10thDegrees,
-                        parsedPosition.TrueHeadingDegrees);
-                }
-                catch { }
-            }
+                    try
+                    {
+                        this.WriteRow(
+                            firstLine.TagBlock,
+                            parsedPosition.Mmsi,
+                            parsedPosition.Latitude10000thMins,
+                            parsedPosition.Longitude10000thMins,
+                            parsedPosition.CourseOverGround10thDegrees,
+                            parsedPosition.TrueHeadingDegrees);
+                    }
+                    catch { }
 
-            if (messageType == 19)
-            {
-                try
-                {
-                    var parsedPosition = new NmeaAisPositionReportExtendedClassBParser(asciiPayload, padding);
-                    this.WriteRow(
-                        firstLine.TagBlock,
-                        parsedPosition.Mmsi,
-                        parsedPosition.Latitude10000thMins,
-                        parsedPosition.Longitude10000thMins,
-                        parsedPosition.CourseOverGround10thDegrees,
-                        parsedPosition.TrueHeadingDegrees);
+                    break;
                 }
-                catch { }
+                case 18:
+                    try
+                    {
+                        NmeaAisPositionReportClassBParser parsedPosition = new(asciiPayload, padding);
+
+                        this.WriteRow(
+                            firstLine.TagBlock,
+                            parsedPosition.Mmsi,
+                            parsedPosition.Latitude10000thMins,
+                            parsedPosition.Longitude10000thMins,
+                            parsedPosition.CourseOverGround10thDegrees,
+                            parsedPosition.TrueHeadingDegrees);
+                    }
+                    catch { }
+
+                    break;
+                case 19:
+                    try
+                    {
+                        NmeaAisPositionReportExtendedClassBParser parsedPosition = new(asciiPayload, padding);
+
+                        this.WriteRow(
+                            firstLine.TagBlock,
+                            parsedPosition.Mmsi,
+                            parsedPosition.Latitude10000thMins,
+                            parsedPosition.Longitude10000thMins,
+                            parsedPosition.CourseOverGround10thDegrees,
+                            parsedPosition.TrueHeadingDegrees);
+                    }
+                    catch { }
+
+                    break;
             }
         }
 
