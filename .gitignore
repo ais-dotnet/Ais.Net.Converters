@@ -330,3 +330,8 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 Ais.Net.Converters.sln.DotSettings
+
+# Build outputs
+_codeCoverage/
+_packages/
+*.sbom.*
