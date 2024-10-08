@@ -335,3 +335,4 @@ Ais.Net.Converters.sln.DotSettings
 _codeCoverage/
 _packages/
 *.sbom.*
+coverage*.xml
