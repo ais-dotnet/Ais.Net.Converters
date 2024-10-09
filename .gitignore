@@ -8,6 +8,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+local.settings.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -328,3 +329,10 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+Ais.Net.Converters.sln.DotSettings
+
+# Build outputs
+_codeCoverage/
+_packages/
+*.sbom.*
+coverage*.xml
