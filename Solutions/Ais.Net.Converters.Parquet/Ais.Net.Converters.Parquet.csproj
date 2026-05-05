@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Ais.Net" Version="0.4.2" />
-    <PackageReference Include="Parquet.Net" Version="3.8.5" />
+    <PackageReference Include="Parquet.Net" Version="6.0.0" />
   </ItemGroup>
 
 </Project>
